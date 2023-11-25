@@ -8,6 +8,8 @@ defmodule RumblWeb.Router do
     plug :put_root_layout, {RumblWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    # custom authentication plug
+    plug RumblWeb.Auth
   end
 
   pipeline :api do
